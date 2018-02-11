@@ -1,0 +1,25 @@
+#labels-view .color {
+    cursor: pointer;
+    --size: 2em;
+    display: inline-block;
+    width: var(--size);
+    height: var(--size);
+    border-radius: var(--size);
+    margin-right: 1.25em;
+    outline: none;
+    box-sizing: content-box;
+}
+
+#labels-view #label-colors {
+    margin-bottom: 1em;
+}
+
+#labels-view .button {
+    margin-right: 1em;
+}
+
+#labels-view #confirmDelete {
+    width: 10em;
+    margin: 0 1em 0 0;
+    vertical-align: middle;
+}

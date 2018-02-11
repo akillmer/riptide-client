@@ -1,0 +1,159 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  --status-bar-height: 1.5em;
+  --side-panel-width: 12em;
+  --border-style: solid 1px rgba(0,0,0,0.15);
+}
+
+input[type="text"] {
+  color: white;
+  font-family: inherit;
+  font-size: 1em;
+  padding: 0.5em;
+  border: none;
+  border-radius: 0.15em;
+  background: rgba(0, 0, 0, 0.3);
+  margin-bottom: 1em;
+  width: calc(100% - 1em);
+}
+
+input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+input[type="text"]:disabled {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.button {
+  outline: none;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 0.25em;
+  padding: 0.6em;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: solid 1px rgba(255, 255, 255, 0.5);
+  color: white;
+  vertical-align: middle;
+}
+
+.button:hover {
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.25);
+  border: solid 1px white;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.75);
+  border: solid 1px rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.button:disabled {
+  cursor: default;
+  color: rgba(255, 255, 255, 0.25);
+  border: solid 1px rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+#view {
+  --left: calc(var(--side-panel-width) + 2em);
+  left: var(--left);
+  width: calc(100% - var(--left) - 2em);
+  overflow-y: scroll;
+  position: fixed;
+  padding: 1em;
+  height: calc(100% - var(--status-bar-height) * 3);
+}
+
+#view label {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.5);
+  padding-bottom: 0.5em;
+}
+
+#view .close {
+  float: right;
+}
+
+#view h1 {
+  color: rgba(255, 255, 255, 0.9);
+  padding-bottom: 0.5em;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+}
+
+.side-panel {
+  position: fixed;
+  background-color: rgba(0,0,0,0.25);
+  width: var(--side-panel-width);
+  padding: 1em;
+  overflow-y: scroll;
+  height: calc(100% - var(--status-bar-height) * 3);
+}
+
+.side-panel h2 {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.8em;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.25);
+  margin-top: 4em;
+  padding-bottom: 0.5em;
+}
+
+.side-panel h2:first-child {
+  margin-top: 0;
+}
+
+.side-panel ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.75);
+  color: white;
+}
+
+.side-panel ul li {
+  padding-bottom: 0.75em;
+  cursor: pointer;
+}
+
+.side-panel ul li:hover {
+  color: lightsalmon;
+}
+
+.side-panel .badge {
+  color: white;
+  font-size: 0.75em;
+  background-color: rgba(0,0,0,0.25);
+  display: inline-block;
+  margin-right: 1em;
+  min-width: 2em;
+  text-align: center;
+  border-radius: 1em;
+  padding: 0.5em;
+}
+
+.icon-button {
+  color: rgba(255, 255, 255, 0.5) !important;
+  cursor: pointer;
+  width: var(--bttn-width);
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  outline: none;
+}
+
+.icon-button:hover i {
+  color: white;
+}
+
+.icon-button:active i {
+  color: lightsalmon !important;
+}
+
+.icon-button:disabled i {
+  cursor: default;
+  color: rgba(255, 255, 255, 0.2) !important;
+}

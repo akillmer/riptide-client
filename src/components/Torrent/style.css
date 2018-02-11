@@ -1,0 +1,109 @@
+.torrent {
+  --icon-pad: 0.15em;
+  --stat-height: 2.2em;
+  --bttn-width: 3em;
+
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.torrent .progress {
+  display: inline-block;
+  width: calc(100% - var(--bttn-width) * 1.38);
+  background-color: rgba(255, 255, 255, 0.25);
+  height: 1.5em;
+  border-radius: 0.25em;
+}
+
+.torrent .progress .bar {
+  height: 100%;
+  background-color: lightgreen;
+  border-radius: inherit;
+  transition: width 2s; 
+  /* socket updates are 1s, a 2s transition is visually smoother */
+}
+
+.torrent .details {
+  margin-top: 0.75em;
+  height: var(--stat-height);
+}
+
+.torrent .stat {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5em;
+  vertical-align: middle;
+  margin-right: 0.5em;
+  color: #ccc;
+  padding: 
+    calc(var(--icon-pad) * 2)
+    calc(var(--icon-pad) * 4)
+    var(--icon-pad)
+    calc(var(--icon-pad) * 2);
+}
+
+.torrent .stat i {
+  vertical-align: middle;
+  padding-bottom: var(--icon-pad);
+  color: white;
+}
+
+/* label*/
+.torrent .stat:last-child i {
+  margin-right: 0.2em;
+}
+
+.torrent .active-stats-show, .active-stats-hide {
+  display: inline-block;
+  vertical-align: middle;
+  transition: max-width 3s;
+  overflow: hidden;
+  height: var(--stat-height);
+}
+
+.torrent .active-stats-show {
+  max-width: 100%;
+}
+
+.torrent .active-stats-hide {
+  max-width: 0%;
+}
+
+.torrent h2, .torrent-size {
+  display: inline-block;
+  margin-bottom: 0.5em;
+}
+
+.torrent .torrent-size {
+  vertical-align: middle;
+  margin-left: 1em;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.torrent h2 {
+  font-size: 1.2em;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.5em;
+  border-radius: 0.25em;
+}
+
+.torrent .confirm-delete {
+  padding: 1.1em 0 1.1em 0;
+  margin-bottom: -0.4em;
+}
+
+.torrent .confirm-delete label {
+  margin-left: 1em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.torrent select {
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  height: 100%;
+  cursor: pointer;
+  margin-right: -0.25em;
+}

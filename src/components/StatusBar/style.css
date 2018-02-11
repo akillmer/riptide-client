@@ -1,0 +1,41 @@
+#status-bar {
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 100%;
+    padding: 0.5em;
+    color: #e3e3e3;
+    height: var(--status-bar-height);
+}
+
+#status-bar .speeds i {
+    padding-top: -0.5em;
+    vertical-align: middle;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#status-bar .speeds {
+    font-size: 0.9em;
+    width: 14.3em;
+}
+
+#status-bar .speeds div {
+    display: inline-block;
+}
+
+#status-bar .speeds div:first-child {
+    float: left;
+}
+
+#status-bar .speeds div:last-child {
+    float: right;
+}
+
+#status-bar .menu {
+    position: fixed;
+    right: 0.5em;
+}
+
+#status-bar .menu button {
+    margin-left: 2em;
+}

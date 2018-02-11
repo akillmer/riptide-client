@@ -1,0 +1,12 @@
+#magnet-bar button {
+    vertical-align: middle;
+}
+
+#magnet-bar input[type="text"] {
+    width: calc(100% - 3em);
+    margin-right: 0.5em;
+}
+
+#magnet-bar input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.25);
+}
